@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>yooickuu projects</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b; /* Глубокий темный фон */
+            color: #ffffff;
+            overflow-x: hidden;
+            -webkit-tap-highlight-color: transparent; /* Убирает синее выделение при клике на телефонах */
+        }
+
+        /* Анимация плавного появления снизу */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Класс, который применяется ко всем карточкам */
+        .animate-item {
+            opacity: 0; /* Изначально скрыто */
+            animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Задержки для каждой карточки, чтобы они появлялись по очереди */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        .delay-7 { animation-delay: 0.7s; }
+
+        /* Фоновое свечение (декор) - исправлено для мобильных */
+        .bg-glow {
+            position: absolute;
+            width: 100vw;
+            max-width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0,0,0,0) 70%);
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col items-center py-10 sm:py-16 px-4 sm:px-6">
+
+    <!-- Фоновое декоративное свечение -->
+    <div class="bg-glow"></div>
+
+    <div class="w-full max-w-2xl mx-auto mb-10 sm:mb-12 text-center animate-item" style="animation-delay: 0s;">
+        <h1 class="text-2xl sm:text-4xl font-semibold tracking-tight text-white mb-2">Portfolio</h1>
+        <div class="h-1 w-12 bg-sky-500 mx-auto rounded-full mt-3 sm:mt-4 opacity-80"></div>
+    </div>
+
+    <div class="w-full max-w-2xl mx-auto flex flex-col gap-3 sm:gap-4">
+
+        <!-- ================= ПРОЕКТ 1 ================= -->
+        <a href="https://yooickuu.github.io/Exile-Cosmetics/" target="_blank" class="animate-item delay-1 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <!-- Градиентный блик при наведении -->
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <!-- НАЗВАНИЕ ПРОЕКТА -->
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                Exile Cosmetics
+            </span>
+            
+            <!-- Иконка стрелки -->
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <!-- ================= ПРОЕКТ 2 ================= -->
+        <a href="https://yooickuu.github.io/Life-fitness/" target="_blank" class="animate-item delay-2 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                Life Fitness
+            </span>
+            
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <!-- ================= ПРОЕКТ 3 ================= -->
+        <a href="https://yooickuu.github.io/Balance-fitness/" target="_blank" class="animate-item delay-3 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                Balance Fitness
+            </span>
+            
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <!-- ================= ПРОЕКТ 4 ================= -->
+        <a href="https://yooickuu.github.io/One-Dent/" target="_blank" class="animate-item delay-4 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                One Dent
+            </span>
+            
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <!-- ================= ПРОЕКТ 5 ================= -->
+        <a href="https://yooickuu.github.io/tetria-coffee/" target="_blank" class="animate-item delay-5 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                Tetria Coffee
+            </span>
+            
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <!-- ================= ПРОЕКТ 6 ================= -->
+        <a href="https://yooickuu.github.io/burka-coffee/" target="_blank" class="animate-item delay-6 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                Burka Coffee
+            </span>
+            
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+        <!-- ================= ПРОЕКТ 7 ================= -->
+        <a href="https://yooickuu.github.io/coffella/" target="_blank" class="animate-item delay-7 group relative flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden transition-all duration-300 active:scale-95 hover:bg-white/10 hover:border-sky-500/50 hover:shadow-[0_0_30px_rgba(56,189,248,0.15)] sm:hover:-translate-y-1">
+            <div class="absolute inset-0 bg-gradient-to-r from-sky-500/0 via-sky-500/10 to-sky-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -translate-x-full group-hover:translate-x-full hidden sm:block"></div>
+            
+            <span class="relative z-10 text-base sm:text-xl font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
+                Coffella
+            </span>
+            
+            <svg class="relative z-10 w-5 h-5 sm:w-6 sm:h-6 text-gray-500 group-hover:text-sky-400 transform sm:group-hover:translate-x-1 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+        </a>
+
+    </div>
+
+</body>
+</html>
